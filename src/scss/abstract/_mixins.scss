@@ -1,0 +1,21 @@
+@mixin font ($size: 1.4rem, $weight: 400, $height: 2.7rem) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin media-desktop {
+    @media (max-width: $desktop-width) { @content; }
+}
+
+@mixin media-laptop {
+    @media (max-width: $laptop-width) { @content; }
+}
+
+@mixin media-tablet {
+    @media (max-width: $tablet-width) { @content; }
+}
+
+@mixin media-mobile {
+    @media (max-width: $mobile-width) { @content; }
+}

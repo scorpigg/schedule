@@ -1,0 +1,66 @@
+.backlog {
+  width: 300px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  word-break: break-all;
+
+  @include media-laptop {
+    min-width: 150px;
+  }
+
+  @include media-tablet {
+    min-width: 120px;
+  }
+
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.backlog__title {
+  letter-spacing: 0.2rem;
+  @include font($size: 3rem, $weight: 400, $height: 3.2rem);
+  margin-bottom: 10px;
+  align-self: center;
+
+  @include media-tablet {
+    @include font($size: 1.8rem, $weight: 400, $height: 2.2rem);
+  }
+}
+
+.backlog__search {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+}
+
+.backlog__task {
+  position: relative;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #eee;
+  cursor: pointer;
+  text-align: center;
+  @extend %transition;
+
+  &:hover .description {
+    display: block;
+    left: 0;
+  }
+
+  .task__title {
+    color: #2f2374;
+  }
+
+  @include media-tablet {
+    @include font($size: 1.3rem, $weight: 400, $height: 1.5rem);
+  }
+}

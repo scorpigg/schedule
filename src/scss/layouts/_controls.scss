@@ -1,0 +1,31 @@
+.calendar__controls {
+  display: flex;
+  justify-content: space-between;
+  min-height: 40px;
+  margin-bottom: 5px;
+}
+
+.control-btn {
+  width: 48%;
+  background-color: #969ee7;
+  cursor: pointer;
+  color: #fff;
+  @include font($size: 2rem, $weight: 400, $height: 2.7rem);
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  @extend %transition;
+
+  @include media-laptop {
+    @include font($size: 1.5rem, $weight: 400, $height: 2rem);
+  }
+
+  @include media-mobile {
+    @include font($size: 1.2rem, $weight: 400, $height: 1.5rem);
+  }
+  
+
+  &:hover {
+    background-color: #8c85f0;
+  }
+}
